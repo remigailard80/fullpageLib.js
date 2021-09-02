@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "declaration": true,
+      "declarationDir": "./lib", // lib폴더에 ts 타입 속성을 빌드한다.
+      "target": "es5", // ES 대상버전
+      "lib": ["dom", "dom.iterable", "esnext"], // 컴파일에 포함될 라이브러리 파일 목록
+      "skipLibCheck": false, // *.D.ts의 타입검사 건너 뜀.
+      "esModuleInterop": true, // ASD 활성
+      "allowSyntheticDefaultImports": true, // default 없는 모듈에서 default import 허용
+      "strict": true,
+      "module": "es6", // 모듈 코드 생성 지정
+      "moduleResolution": "node", // 모듈 해석방식 결정
+      "resolveJsonModule": true, // json확장자로 임포트된 모듈 포함.
+      "jsx": "react", // tsx 파일에서 jsx를 지원함. 모드가 여러개임
+      "typeRoots": ["@types"]
+    },
+    "include": ["**/*.tsx", "**/*.ts", "@types", "index.ts"],
+    "exclude": ["node_modules", "build", "dist", "lib", "example", "rollup.config.js"]
+  }
