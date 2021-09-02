@@ -6,9 +6,13 @@ import postcssPrefixer from 'postcss-prefixer';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
+import babel from 'rollup-plugin-babel';
+import svgr from '@svgr/rollup';
+import url from 'rollup-plugin-url';
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx', '.scss'];
 
+// babel-preset-react-app를 사용한다면 BABEL_ENV를 필수로 설정해야함.
 process.env.BABEL_ENV = 'production';
 
 function setUpRollup({ input, output }) {
@@ -26,6 +30,9 @@ function setUpRollup({ input, output }) {
         commonjs({
           include: /.yarn/,
         }),
+        babel({ extensions, include: ['src/**/*'], runtimeHelpers: true }), // Babel을 사용 할 수 있게 해줌
+        url(),
+        svgr(),
         typescript({ useTsconfigDeclarationDir: true }), // 만든 타입을 자동으로 build된 결과물에 넣어줌.
         postcss({
           extract: true,
@@ -45,17 +52,17 @@ function setUpRollup({ input, output }) {
 
   export default [
     setUpRollup({
-      input: 'index.ts',
+      input: './src/index.ts',
       output: {
-        file: 'dist/cjs.js',
+        file: pkg.cjs,
         sourcemap: true,
         format: 'cjs',
       },
     }),
     setUpRollup({
-      input: 'index.ts',
+      input: './src/index.ts',
       output: {
-        file: 'dist/esm.js',
+        file: pkg.esm,
         sourcemap: true,
         format: 'esm',
       },
