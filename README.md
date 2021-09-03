@@ -4,7 +4,9 @@ custom fullpage library
 ## stacks
 
 > yarn2 : node_modules에서 해방시켜준다길래
+
 > rollup.js : ems, cjs 둘다 빌드하고싶어서 그리고 웹팩보다 빠르대서 선동당함
+
 > TypeScript : 이제 연습할때 됐음
 
 ## Goal
