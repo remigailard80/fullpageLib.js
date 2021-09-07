@@ -3,12 +3,12 @@ custom fullpage library
 
 ## stacks
 
-> yarn2 : node_modules에서 해방시켜준다길래
+> yarn2 : escape node_modules
 
-> rollup.js : ems, cjs 둘다 빌드하고싶어서 그리고 웹팩보다 빠르대서 선동당함
+> rollup.js : buil ems, cjs & better bundle performance than webpack as i heard 
 
-> TypeScript : 이제 연습할때 됐음
+> TypeScript : time to practice
 
 ## Goal
 
-> 기존 돈 받고 팔던, 1년전 직장에서는 구현하지 못했던 FullPage.js 를 React.js용 라이브러리로 구현하여 npm에 배포한다.
+> Try publishing my own library on npm and develop that lib
