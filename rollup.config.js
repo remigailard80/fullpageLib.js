@@ -22,7 +22,7 @@ function setUpRollup({ input, output }) {
       output,
       watch: {
         include: '*',
-        exclude: '.yarn/**',
+        exclude: '.yarn/**'
       },
       plugins: [
         peerDepsExternal(), // peerDependency를 번들링 결과물에서 제외
@@ -34,7 +34,10 @@ function setUpRollup({ input, output }) {
         babel({ extensions, runtimeHelpers: true }), // Babel을 사용 할 수 있게 해줌
         url(),
         svgr(),
-        typescript(), // 만든 타입을 자동으로 build된 결과물에 넣어줌.
+        typescript({
+          exclude: [ '**/stories', '**/*.stories'],
+          useTsconfigDeclarationDir: true
+        }), // 만든 타입을 자동으로 build된 결과물에 넣어줌.
         postcss({
           extract: true,
           modules: true,

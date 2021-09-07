@@ -21,5 +21,6 @@
       }
     },
     "include": ["**/*.tsx", "**/*.ts", "@types", "index.ts"],
-    "exclude": ["build", "dist", "lib", "**/stories", "**/*.stories.tsx", "rollup.config.js"]
+    "exclude": ["build", "dist", "lib", "**/stories", "**/*.stories.tsx", "rollup.config.js"],
+    "NODE_OPTIONS": "--require ./.pnp.cjs"
 }
