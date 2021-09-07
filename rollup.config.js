@@ -28,9 +28,7 @@ function setUpRollup({ input, output }) {
         peerDepsExternal(), // peerDependency를 번들링 결과물에서 제외
         json(),
         resolve({ extensions }), // node_modules에서 모듈 불러올 수 있게 해줌, ts/tsx 불러올 수  있게 해줌.
-        commonjs({
-          include: /.yarn/,
-        }),
+        commonjs(),
         babel({ extensions, runtimeHelpers: true }), // Babel을 사용 할 수 있게 해줌
         url(),
         svgr(),
