@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
       "declaration": true,
-      "declarationDir": "./lib", // lib폴더에 ts 타입 속성을 빌드한다.
+      "declarationDir": "dist/types", // dist폴더에 ts 타입 속성을 빌드한다.
       "target": "es5", // ES 대상버전
       "lib": ["dom", "dom.iterable", "esnext"], // 컴파일에 포함될 라이브러리 파일 목록
       "skipLibCheck": true, // *.D.ts의 타입검사 건너 뜀.
@@ -14,7 +14,12 @@
       "jsx": "react", // tsx 파일에서 jsx를 지원함. 모드가 여러개임
       "typeRoots": ["@types"],
       "noImplicitAny": false,
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["/*"],
+        "~/*": ["src/*"]
+      }
     },
     "include": ["**/*.tsx", "**/*.ts", "@types", "index.ts"],
     "exclude": ["build", "dist", "lib", "rollup.config.js"]
-  }
+}

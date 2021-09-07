@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "cjs": "dist/cjs.js",
   "esm": "dist/esm.js",
+  "main": "dist/index.js",
   "repository": "https://github.com/remigailard80/fullpageLib.js",
   "author": "KIMMINSEOK",
   "license": "NO LICENSE",

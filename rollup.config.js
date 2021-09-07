@@ -18,13 +18,14 @@ process.env.BABEL_ENV = 'production';
 function setUpRollup({ input, output }) {
     return {
       input,
+      // exports: 'named',
       output,
       watch: {
         include: '*',
         exclude: '.yarn/**',
       },
       plugins: [
-        peerDepsExternal(), // peerDEpendency를 번들링 결과물에서 제외
+        peerDepsExternal(), // peerDependency를 번들링 결과물에서 제외
         json(),
         resolve({ extensions }), // node_modules에서 모듈 불러올 수 있게 해줌, ts/tsx 불러올 수  있게 해줌.
         commonjs({
@@ -33,7 +34,7 @@ function setUpRollup({ input, output }) {
         babel({ extensions, include: ['src/**/*'], runtimeHelpers: true }), // Babel을 사용 할 수 있게 해줌
         url(),
         svgr(),
-        typescript({ useTsconfigDeclarationDir: true }), // 만든 타입을 자동으로 build된 결과물에 넣어줌.
+        typescript(), // 만든 타입을 자동으로 build된 결과물에 넣어줌.
         postcss({
           extract: true,
           modules: true,
@@ -52,7 +53,7 @@ function setUpRollup({ input, output }) {
 
   export default [
     setUpRollup({
-      input: './src/index.ts',
+      input: 'src/index.ts',
       output: {
         file: pkg.cjs,
         sourcemap: true,
@@ -60,7 +61,7 @@ function setUpRollup({ input, output }) {
       },
     }),
     setUpRollup({
-      input: './src/index.ts',
+      input: 'src/index.ts',
       output: {
         file: pkg.esm,
         sourcemap: true,
