@@ -9,7 +9,7 @@
   "license": "NO LICENSE",
   "types": "dist/types/index.d.ts",
   "module": "dist/cjs.js",
-  "files": [
+  "files" : [ 
     "/dist"
   ],
   "devDependencies": {
