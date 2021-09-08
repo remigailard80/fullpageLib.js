@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "cjs": "dist/cjs.js",
   "esm": "dist/esm.js",
-  "main": "dist/index.js",
+  "main": "dist/index.ts",
   "repository": "https://github.com/remigailard80/fullpageLib.js",
   "author": "KIMMINSEOK",
   "license": "NO LICENSE",
   "types": "dist/types/index.d.ts",
   "module": "dist/cjs.js",
-  "files" : [ 
+  "files": [
     "/dist"
   ],
   "devDependencies": {

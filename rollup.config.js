@@ -31,7 +31,7 @@ function setUpRollup({ input, output }) {
         commonjs({
           include: /.yarn/,
         }),
-        babel({ extensions, include: ['src/**/*'], runtimeHelpers: true }), // Babel을 사용 할 수 있게 해줌
+        babel({ extensions, runtimeHelpers: true }), // Babel을 사용 할 수 있게 해줌
         url(),
         svgr(),
         typescript({

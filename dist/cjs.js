@@ -8,9 +8,9 @@ function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'defau
 
 var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
 
-function Container(_a) {
-  var content = _a.content;
-  return /*#__PURE__*/React__default['default'].createElement(React__default['default'].Fragment, null, /*#__PURE__*/React__default['default'].createElement("div", null, "hello, ", content));
+function Container(_ref) {
+    var content = _ref.content;
+    return /*#__PURE__*/ React__default['default'].createElement(React__default['default'].Fragment, null, /*#__PURE__*/ React__default['default'].createElement("div", null, "hello, ", content));
 }
 
 exports.Container = Container;

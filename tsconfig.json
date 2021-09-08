@@ -15,12 +15,7 @@
       "typeRoots": ["@types"],
       "noImplicitAny": false,
       "baseUrl": ".",
-      "paths": {
-        "@/*": ["/*"],
-        "~/*": ["src/*"]
-      }
     },
     "include": ["**/*.tsx", "**/*.ts", "@types", "index.ts"],
-    "exclude": ["build", "dist", "lib", "rollup.config.js"],
-    "NODE_OPTIONS": "--require ./.pnp.cjs"
+    "exclude": ["build", "dist", "lib", "rollup.config.js"]
 }
