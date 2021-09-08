@@ -18,9 +18,8 @@
       "paths": {
         "@/*": ["/*"],
         "~/*": ["src/*"]
-      }
+      },
     },
-    "include": ["**/*.tsx", "**/*.ts", "@types", "index.ts"],
-    "exclude": ["build", "dist", "lib", "**/stories", "**/*.stories.tsx", "rollup.config.js"],
-    "NODE_OPTIONS": "--require ./.pnp.cjs"
+    "include": ["**/*.tsx", "**/*.ts", "@types", "index.ts", "src/index.ts"],
+    "exclude": ["build", "dist", "lib", "**/stories", "**/*.stories.tsx", "rollup.config.js"]
 }
