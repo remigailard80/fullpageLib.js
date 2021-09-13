@@ -10,3 +10,12 @@ export default {
       content: { control: 'content' },
     },
   } as ComponentMeta<typeof Container>;
+
+const Template: ComponentStory<typeof Container> = (args) => <Container {...args} />;
+
+
+export const Normal = Template.bind({});
+Normal.args = {
+  content: 'test',
+  label: 'div',
+};
