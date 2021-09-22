@@ -3791,7 +3791,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^17":
+"@types/react@npm:*":
   version: 17.0.20
   resolution: "@types/react@npm:17.0.20"
   dependencies:
@@ -3799,6 +3799,17 @@ __metadata:
     "@types/scheduler": "*"
     csstype: ^3.0.2
   checksum: e342bfaa4fe052fc3a445ea49f746f3fd82cfc9c8028eae139a3e0763ead1871f353bd40da2a472f23d2b52544d2781d40e3159c0703e7e2ff08c13f067a3b9c
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:^17.0.24":
+  version: 17.0.24
+  resolution: "@types/react@npm:17.0.24"
+  dependencies:
+    "@types/prop-types": "*"
+    "@types/scheduler": "*"
+    csstype: ^3.0.2
+  checksum: 99383e2cbaa85831984cc17ec4a5fe7fd091aa21ef023855570440d8d0b5038efb8159701e8e2a0f6ddff3efae655922ded690190e7d172653608cbde016cb66
   languageName: node
   linkType: hard
 
@@ -6404,7 +6415,7 @@ __metadata:
     "@types/jest": ^27.0.1
     "@types/mdx-js__react": ^1
     "@types/node": ^16.7.10
-    "@types/react": ^17
+    "@types/react": ^17.0.24
     "@types/react-dom": ^17.0.9
     babel-loader: ^8.2.2
     babel-preset-react-app: ^10.0.0
@@ -6421,7 +6432,7 @@ __metadata:
     rollup-plugin-postcss: ^4.0.1
     rollup-plugin-typescript2: ^0.30.0
     rollup-plugin-url: ^3.0.1
-    typescript: ^4.4.2
+    typescript: 4.4.2
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -14931,23 +14942,23 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-typescript@^4.4.2:
-  version: 4.4.3
-  resolution: "typescript@npm:4.4.3"
+typescript@4.4.2:
+  version: 4.4.2
+  resolution: "typescript@npm:4.4.2"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 05823f21796d450531a7e4ab299715d38fd9ded0e4ce7400876053f4b5166ca3dde7a68cecfe72d9086039f03c0b6edba36516fb10ed83c5837d9600532ea4c2
+  checksum: 194e08e9d1971d667d6fd1a0554616b7022312a2319d70e81a64e502a265992061ee7817ed9a69b52bbabe7a9b85e7938cb8c11c433e40a516b277f8c4dacd51
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.4.2#~builtin<compat/typescript>":
-  version: 4.4.3
-  resolution: "typescript@patch:typescript@npm%3A4.4.3#~builtin<compat/typescript>::version=4.4.3&hash=32657b"
+"typescript@patch:typescript@4.4.2#~builtin<compat/typescript>":
+  version: 4.4.2
+  resolution: "typescript@patch:typescript@npm%3A4.4.2#~builtin<compat/typescript>::version=4.4.2&hash=32657b"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 28ab98313afab46788ff41014fdb5932430ada6e03cf9e92ac47f406526a2cac1ae2894834e7da61e46b7429318e9c47f45ba8de323332f0cb9af99b72ebae74
+  checksum: 3109ae25705746996007161cdd3271857db4f40356b894e34d4cabc216bf9e251f53e0bb6e48df2450b5e3fd948dcbee716a616a4ad4cf7251292025e6163cb1
   languageName: node
   linkType: hard
 
