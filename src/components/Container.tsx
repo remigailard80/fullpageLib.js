@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import styles from './container.module.scss'
+import scrollHandler from '../scripts/scroll';
 
-interface ContainerProps {
-    content: string;
-};
+function Container({ children }) {
+    const main = useRef();
 
-function Container({ content }: ContainerProps) {
+    useEffect(() => {
+        const sections = main.current.childNodes;
+        scrollHandler(sections);
+    }, [])
     return (
         <>
-            <div>
-                hello, { content }
+            <div id={styles.fullpage} ref={main}>
+                {children}
             </div>
         </>
     );

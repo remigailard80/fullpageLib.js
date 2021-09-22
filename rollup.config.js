@@ -9,6 +9,7 @@ import json from '@rollup/plugin-json';
 import babel from 'rollup-plugin-babel';
 import svgr from '@svgr/rollup';
 import url from 'rollup-plugin-url';
+import scss from 'rollup-plugin-scss'
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx', '.scss'];
 
@@ -38,6 +39,7 @@ function setUpRollup({ input, output }) {
           exclude: [ '**/stories', '**/*.stories'],
           useTsconfigDeclarationDir: true
         }), // 만든 타입을 자동으로 build된 결과물에 넣어줌.
+        scss(),
         postcss({
           extract: true,
           modules: true,
